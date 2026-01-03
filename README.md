@@ -12,4 +12,4 @@ Install libposixext.so into your favourite library directory, and posixext.h int
 Do a `#include <posixext>` and you should be fine. Might want to add `-lposixext` to your ldflags if your linker is
 less than smart (hint: ours is).
 ## Forks and whatever?
-Go ahead. Standard GPL2 stuff
+Go ahead, it's CDDL'd for a reason
