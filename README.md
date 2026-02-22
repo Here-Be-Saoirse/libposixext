@@ -6,10 +6,26 @@ over Solaris 10's less than complete libc. This was hacked together in a few hou
 promises as to the posixness, usefulness, readability or lickability of this code. If your machine detonates because
 you included this library, then that might say some questionable things about your machine.
 ## How to build?
-`cc -fPIC -shared -o libposixext.so posixext.c`
+A Makefile is provided:
+```
+make
+```
+Or manually:
+```
+cc -fPIC -shared -o libposixext.so posixext.c
+```
+You can override the compiler and flags:
+```
+make CC=gcc CFLAGS="-O2 -Wall"
+```
+## Install?
+```
+make install
+```
+Installs `libposixext.so` to `/usr/local/lib` and `posixext.h` to `/usr/local/include` by default.
+Override with `PREFIX=/your/path make install`.
 ## Usage?
 Install libposixext.so into your favourite library directory, and posixext.h into where your includes go.
-Do a `#include <posixext>` and you should be fine. Might want to add `-lposixext` to your ldflags if your linker is
-less than smart (hint: ours is).
+Do a `#include <posixext.h>` and add `-lposixext` to your ldflags.
 ## Forks and whatever?
 Go ahead. Standard GPL2 stuff
