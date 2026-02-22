@@ -28,4 +28,4 @@ Override with `PREFIX=/your/path make install`.
 Install libposixext.so into your favourite library directory, and posixext.h into where your includes go.
 Do a `#include <posixext.h>` and add `-lposixext` to your ldflags.
 ## Forks and whatever?
-Go ahead. Standard GPL2 stuff
+Go ahead. It's CDDL for a reason
